@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:powderblue; 
+             background-repeat: no-repeat; 
+             background-size: 100% 100%; 
+             background-blend-mode:overlay; 
+             background-image: url('https://img.lovepik.com/background/20211021/large/lovepik-red-wine-background-image_400344548.jpg');">
+     <center>
+
+    <div>
+        <h1>Welcome to Wine Quality Prediction</h1><hr><br>
+    
+
+        <form method="post" action="{% url 'result' %}">
+        {% csrf_token %}
+            <label>fixed acidity</label>
+            <input type="text" name="num1"><br><br>
+            <label>volatile acidity</label>
+            <input type="text" name="num2"><br><br>
+            <label>citric acid</label>
+            <input type="text" name="num3"><br><br>
+            <label>residual sugar</label>
+            <input type="text" name="num4"><br><br>
+            <label>chlorides</label>
+            <input type="text" name="num5"><br><br>
+            <label>total sulfur dioxide</label>
+            <input type="text" name="num6"><br><br>
+            <label>density</label>
+            <input type="text" name="num7"><br><br>
+            <label>pH</label>
+            <input type="text" name="num8"><br><br>
+            <label>sulphates</label>
+            <input type="text" name="num9"><br><br>
+            <label>alcohol</label>
+            <input type="text" name="num10"><br><br><hr>
+            <input type="submit" name="Calculate"><br><br><br><br><br><br>
+            
+    </form>
+</div>
+</center>
+</body>
+</html>
